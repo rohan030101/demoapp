@@ -1,2 +1,1 @@
-# demoapp
-Will be a demo app for show case
+This will contain backend of out app.
