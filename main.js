@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
+const jwt = require('jsonwebtoken');
 const app = express();
 const port = 3000;
 const salt = 10;
@@ -19,6 +20,10 @@ app.post("/login", (req, res) => {
     bcrypt.hash(password, salt, function (err, hash) {
       console.log(hash);
       console.log(`The UserID and Password is ${username} and ${hash}`);
+      const token = jwt.sign({username},"soc",{
+        expiresIn:"1m"
+      })
+      console.log(token);
     });
   });
 
