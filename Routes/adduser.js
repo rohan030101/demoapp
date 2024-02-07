@@ -15,8 +15,10 @@ router.get("/", async (req, res) => {
 
 
 router.post('/adduser',async(req,res)=>{
-    let {username, password} = req.body;
-
+   let username = req.body.username;
+   let password = req.body.password;    
+   console.log(username, password);
+   res.sendStatus(200);
 });
 
 
