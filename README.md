@@ -1,1 +1,1 @@
-This will contain backend of out app.
+This will contain backend of our app.
